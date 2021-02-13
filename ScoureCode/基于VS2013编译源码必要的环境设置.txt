@@ -1,0 +1,6 @@
+必须的环境配置
+1、需要安装多字节MFC库（微软官网上下载Multiplebyte MFC Library for 2013)。
+2、工程需设置为Release|Win32配置。
+3、需要下载并安装DirectX SDK，并将SDK的include和lib目录添加工程中。（我安装的是Microsoft DirectX SDK (August 2009)版本，微软官网可以下载到）。
+4、解决方案中各个子工程的通用属性（Properties -> Genral）中的Use of MFC 使用标准WIndows库，字符集使用多字节字符集。
+5、IDE右侧Solution Explorer中的dlls节点下的Game、Game-d3xp这两个工程的的预编译定义(C/C++ - > Preprocessor -> Preprocessor Definitions)需要添加_XKEYCHECK_H声明，同时关闭预预构建事件命令行(Build Events -> Pre-Build Events -> Use In Build 设置为No)。
